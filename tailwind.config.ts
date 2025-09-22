@@ -57,6 +57,19 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Ecotrax Brand Colors
+        "forest-green": "hsl(var(--forest-green))",
+        "bamboo-beige": "hsl(var(--bamboo-beige))",
+        "clay-brown": "hsl(var(--clay-brown))",
+        "ocean-blue": "hsl(var(--ocean-blue))",
+      },
+      boxShadow: {
+        'eco': 'var(--shadow-eco)',
+        'tech': 'var(--shadow-tech)',
+        'organic': 'var(--shadow-organic)',
+      },
+      transitionTimingFunction: {
+        'organic': 'cubic-bezier(0.23, 1, 0.32, 1)',
       },
       borderRadius: {
         lg: "var(--radius)",

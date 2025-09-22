@@ -8,35 +8,63 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Ecotrax Brand Colors */
+    --forest-green: 154 75% 21%;
+    --bamboo-beige: 45 45% 82%;
+    --clay-brown: 25 28% 44%;
+    --ocean-blue: 189 35% 28%;
+    
+    /* Core System Colors */
+    --background: 45 45% 98%;
+    --foreground: 154 75% 12%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 45 45% 97%;
+    --card-foreground: 154 75% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 45 45% 98%;
+    --popover-foreground: 154 75% 12%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 154 75% 21%;
+    --primary-foreground: 45 45% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 45 35% 88%;
+    --secondary-foreground: 154 75% 21%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 45 25% 92%;
+    --muted-foreground: 154 20% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 189 35% 85%;
+    --accent-foreground: 189 35% 15%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 45 45% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 45 25% 88%;
+    --input: 45 25% 90%;
+    --ring: 154 75% 21%;
 
-    --radius: 0.5rem;
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(189 35% 28%) 0%, hsl(45 45% 82%) 100%);
+    --gradient-problem: linear-gradient(120deg, hsl(25 28% 44%) 0%, hsl(154 75% 21%) 100%);
+    --gradient-solution: linear-gradient(135deg, hsl(189 35% 28%) 0%, hsl(45 45% 82%) 100%);
+    --gradient-impact: linear-gradient(150deg, hsl(25 28% 44%) 0%, hsl(189 35% 28%) 100%);
+    --gradient-features: linear-gradient(135deg, hsl(189 35% 28%) 0%, hsl(154 75% 21%) 100%);
+    --gradient-team: linear-gradient(120deg, hsl(45 45% 82%) 0%, hsl(154 75% 21%) 100%);
+
+    /* Textures & Patterns */
+    --bamboo-pattern: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23E6D5B8' fill-opacity='0.1' fill-rule='evenodd'%3E%3Cpath d='M20 20c0 11.046-8.954 20-20 20v-40c11.046 0 20 8.954 20 20zM0 20v20c11.046 0 20-8.954 20-20H0z'/%3E%3C/g%3E%3C/svg%3E");
+    --contour-pattern: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg stroke='%231B4332' stroke-opacity='0.1' stroke-width='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    
+    /* Shadows */
+    --shadow-eco: 0 10px 40px -10px hsl(154 75% 21% / 0.3);
+    --shadow-tech: 0 20px 60px -15px hsl(189 35% 28% / 0.4);
+    --shadow-organic: 0 8px 32px -8px hsl(25 28% 44% / 0.3);
+
+    /* Animations */
+    --transition-organic: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +128,87 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+}
+
+@layer components {
+  /* Gradient backgrounds */
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+    background-attachment: fixed;
+  }
+  
+  .bg-gradient-problem {
+    background: var(--gradient-problem);
+    position: relative;
+  }
+  
+  .bg-gradient-problem::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: var(--contour-pattern);
+    opacity: 0.3;
+  }
+  
+  .bg-gradient-solution {
+    background: var(--gradient-solution);
+    position: relative;
+  }
+  
+  .bg-gradient-impact {
+    background: var(--gradient-impact);
+  }
+  
+  .bg-gradient-features {
+    background: var(--gradient-features);
+  }
+  
+  .bg-gradient-team {
+    background: var(--gradient-team);
+    position: relative;
+  }
+  
+  .bg-gradient-team::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: var(--bamboo-pattern);
+    opacity: 0.2;
+  }
+
+  /* Custom animations */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  .animate-fade-in-up {
+    animation: fade-in-up 0.8s ease-out forwards;
+  }
+  
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Text effects */
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(var(--forest-green)), hsl(var(--ocean-blue)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }
