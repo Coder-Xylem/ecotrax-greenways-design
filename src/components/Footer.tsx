@@ -107,19 +107,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-white/60 text-sm mb-4 md:mb-0">
-            © {currentYear} Team Ecotrax. Building sustainable infrastructure for tomorrow.
-          </div>
-          
-          <div className="flex items-center space-x-6 text-sm text-white/60">
-            <button className="hover:text-bamboo-beige transition-colors">
-              Privacy Policy
-            </button>
-            <button className="hover:text-bamboo-beige transition-colors">
-              Terms of Service
-            </button>
-            <button className="hover:text-bamboo-beige transition-colors">
-              Accessibility
-            </button>
+            © {currentYear} Team Nexus - NIT Raipur. Building sustainable infrastructure for tomorrow.
           </div>
         </div>
         

@@ -19,6 +19,7 @@ const Navigation = () => {
     { label: "Impact", href: "#impact" },
     { label: "Roadmap", href: "#deployment" },
     { label: "Smart Features", href: "#features" },
+    { label: "Research", href: "#research" },
     { label: "Team", href: "#team" }
   ];
 
@@ -33,7 +34,7 @@ const Navigation = () => {
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'bg-background/90 backdrop-blur-md shadow-eco border-b border-border' 
+        ? 'bg-background/90 backdrop-blur-md shadow-eco border border-border rounded-full mx-4 mt-2' 
         : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-6">
@@ -58,12 +59,6 @@ const Navigation = () => {
             ))}
           </div>
           
-          {/* CTA Button */}
-          <div className="hidden md:block">
-            <Button variant="hero" size="sm">
-              Get Started
-            </Button>
-          </div>
           
           {/* Mobile Menu Button */}
           <button
@@ -89,11 +84,6 @@ const Navigation = () => {
                   {link.label}
                 </button>
               ))}
-              <div className="pt-3">
-                <Button variant="hero" size="sm" className="w-full">
-                  Get Started
-                </Button>
-              </div>
             </div>
           </div>
         )}

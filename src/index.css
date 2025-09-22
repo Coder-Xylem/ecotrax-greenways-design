@@ -16,22 +16,22 @@ All colors MUST be HSL.
     
     /* Core System Colors */
     --background: 45 45% 98%;
-    --foreground: 154 75% 12%;
+    --foreground: 154 75% 8%;
 
-    --card: 45 45% 97%;
-    --card-foreground: 154 75% 15%;
+    --card: 45 45% 96%;
+    --card-foreground: 154 75% 10%;
 
     --popover: 45 45% 98%;
-    --popover-foreground: 154 75% 12%;
+    --popover-foreground: 154 75% 8%;
 
     --primary: 154 75% 21%;
     --primary-foreground: 45 45% 98%;
 
-    --secondary: 45 35% 88%;
-    --secondary-foreground: 154 75% 21%;
+    --secondary: 45 35% 85%;
+    --secondary-foreground: 154 75% 15%;
 
-    --muted: 45 25% 92%;
-    --muted-foreground: 154 20% 45%;
+    --muted: 45 25% 90%;
+    --muted-foreground: 154 30% 35%;
 
     --accent: 189 35% 85%;
     --accent-foreground: 189 35% 15%;
@@ -129,7 +129,7 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground font-sans;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   }
 }
 

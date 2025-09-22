@@ -3,46 +3,46 @@ import { Card } from "@/components/ui/card";
 const TeamSection = () => {
   const teamMembers = [
     {
-      name: "Dr. Arjun Patel",
-      role: "Lead Engineer & Co-founder",
-      expertise: "Materials Science, Composite Engineering",
+      name: "Mohd Saqlain Khan",
+      role: "Team Lead & Project Manager",
+      expertise: "Civil Engineering, Infrastructure Design",
       image: "👨‍🔬",
-      description: "15+ years in sustainable materials research with focus on bamboo composites"
+      description: "NIT Raipur student specializing in sustainable infrastructure solutions"
     },
     {
-      name: "Priya Sharma",
+      name: "Shahid Alam",
+      role: "Technical Lead",
+      expertise: "Materials Science, Composite Engineering",
+      image: "👨‍💻",
+      description: "Engineering student focused on bamboo composite research and development"
+    },
+    {
+      name: "Deepika Singh",
       role: "Sustainability Director",
       expertise: "Environmental Impact, Waste Management",
       image: "👩‍🌾",
-      description: "Environmental engineer specializing in plastic waste recycling solutions"
+      description: "Environmental engineering student specializing in plastic waste solutions"
     },
     {
-      name: "Rajesh Kumar",
-      role: "Technical Lead",
-      expertise: "Civil Engineering, Infrastructure Design",
-      image: "👨‍💻",
-      description: "Rural infrastructure specialist with 12 years experience in NER projects"
-    },
-    {
-      name: "Dr. Meera Singh",
-      role: "Research Head",
+      name: "Satakshi Tripathi",
+      role: "Research Analyst",
       expertise: "IoT Integration, Smart Systems",
       image: "👩‍💼",
-      description: "PhD in Smart Infrastructure with expertise in sensor networks and analytics"
+      description: "Technology student with expertise in sensor networks and data analytics"
     },
     {
-      name: "Ankit Verma",
-      role: "Operations Manager",
+      name: "Abhishek Tripathi",
+      role: "Operations Coordinator",
       expertise: "Project Management, Community Engagement",
       image: "👨‍🏭",
-      description: "Local community liaison with deep understanding of NER logistics"
+      description: "Student with focus on community liaison and project implementation"
     },
     {
-      name: "Sonam Choden",
+      name: "Shivang Baranwan",
       role: "Financial Analyst",
       expertise: "Cost Modeling, Economic Impact",
-      image: "👩‍💻",
-      description: "Economist focused on rural development financing and impact assessment"
+      image: "👨‍💻",
+      description: "Student focused on economic modeling and impact assessment for rural projects"
     }
   ];
 
@@ -77,11 +77,11 @@ const TeamSection = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-            Meet Team Ecotrax
+            Meet Team Nexus
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            A passionate team of engineers, researchers, and community advocates 
-            dedicated to transforming rural infrastructure through innovation.
+            A passionate team of engineering students from NIT Raipur 
+            dedicated to transforming rural infrastructure through innovative sustainable solutions.
           </p>
         </div>
         
@@ -91,7 +91,7 @@ const TeamSection = () => {
             Our Mission
           </h3>
           <p className="text-lg text-foreground/80 italic leading-relaxed max-w-4xl mx-auto">
-            "Local innovation for local needs — Ecotrax envisions sustainable, modular roadways 
+            "Local innovation for local needs — Team Nexus from NIT Raipur envisions sustainable, modular roadways 
             that empower farmers, reduce plastic waste, and adapt to Northeast India's unique terrain. 
             We believe in technology that serves communities, not the other way around."
           </p>
